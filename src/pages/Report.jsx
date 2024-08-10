@@ -67,7 +67,7 @@ const Report = () => {
             type="text" 
             value={name} 
             onChange={(e) => setName(e.target.value)} 
-            className="w-full px-4 py-2 border rounded-md" 
+            className="w-full px-4 py-2 border rounded-md text-black" 
             placeholder="Enter your name" 
           />
         </div>
@@ -77,7 +77,7 @@ const Report = () => {
             type="text" 
             value={contact} 
             onChange={(e) => setContact(e.target.value)} 
-            className="w-full px-4 py-2 border rounded-md" 
+            className="w-full px-4 py-2 border rounded-md text-black" 
             placeholder="Enter your contact number" 
           />
         </div>
@@ -87,7 +87,7 @@ const Report = () => {
             type="text" 
             value={location} 
             onChange={(e) => setLocation(e.target.value)} 
-            className="w-full px-4 py-2 border rounded-md" 
+            className="w-full px-4 py-2 border rounded-md text-black" 
             placeholder="Enter your location" 
           />
           <button 
@@ -108,7 +108,7 @@ const Report = () => {
           <input 
             type="file" 
             onChange={(e) => setPicture(e.target.files[0])} 
-            className="w-full px-4 py-2 border rounded-md" 
+            className="w-full px-4 py-2 border rounded-md text-black" 
           />
         </div>
         <button 

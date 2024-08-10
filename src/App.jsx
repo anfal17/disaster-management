@@ -4,9 +4,10 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Report from './pages/Report';
 import Guides from './pages/Guides';
+import Register from './pages/Register';
 import GuideDetail from './components/GuideDetail';
 // import Helpline from './pages/Helpline';
-// import Login from './pages/Login';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/report" element={<Report />} />
         <Route path="/guides" element={<Guides />} />
         <Route path="/guides/:id" element={<GuideDetail/>} />
