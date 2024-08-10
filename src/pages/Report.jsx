@@ -1,4 +1,3 @@
-// src/components/Report.jsx
 import React, { useState } from 'react';
 import { ref, push } from "firebase/database";
 import { db } from '../firebaseConfig';
@@ -35,7 +34,10 @@ const Report = () => {
       name: name || null,
       contact: contact || null,
       location: location || null,
-      geoLocation: geoLocation || null,
+      geoLocation: geoLocation.latitude && geoLocation.longitude ? {
+        latitude: geoLocation.latitude,
+        longitude: geoLocation.longitude
+      } : null,
       picture: picture ? URL.createObjectURL(picture) : null,
     };
 
