@@ -30,6 +30,10 @@ Currently, two official plugins are available:
 ### Helpline
 ![Helpline](https://github.com/user-attachments/assets/cf763588-5843-443a-9def-7091729b0a6a)
 
+##Command Centre##
+![image](https://github.com/user-attachments/assets/1870489f-1dad-4aa7-b6a9-7f5c56c09b64)
+
+
 ## Features to Implement
 
 ### City Divisions & Relief Centers
