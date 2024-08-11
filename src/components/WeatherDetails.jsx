@@ -113,7 +113,7 @@ const WeatherApp = () => {
               name="city"
               value={city}
               onChange={(e) => setCity(e.target.value)}
-              className="mt-1 px-4 py-2 block w-64 h-12 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 placeholder-gray-500"
+              className="mt-1 px-4 py-2 block w-64 h-12 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 placeholder-gray-500 text-black"
               placeholder="Enter city name"
             />
             <button

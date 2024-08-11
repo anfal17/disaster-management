@@ -2,44 +2,14 @@
 import React, { useEffect, useState } from 'react';
 
 const AlertComponent = () => {
-  const [location, setLocation] = useState(null);
   const [weatherNews, setWeatherNews] = useState([]);
 
   useEffect(() => {
-    const storedLocation = localStorage.getItem('location');
-    if (storedLocation) {
-      setLocation(JSON.parse(storedLocation));
-    } else {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          const loc = { lat: latitude, lon: longitude };
-          setLocation(loc);
-          localStorage.setItem('location', JSON.stringify(loc));
-          fetchWeatherNews(loc);
-        },
-        (error) => {
-          console.error("Failed to retrieve your location", error);
-        }
-      );
-    }
+    generateStaticWeatherNews();
   }, []);
 
-  const fetchWeatherNews = async (loc) => {
-    const apiKey = 'df1286f2eaf8ed819d1fc86a052e5fe4';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${loc.lat}&lon=${loc.lon}&exclude=minutely,hourly,daily,alerts&appid=${apiKey}`;
-    
-    try {
-      const response = await fetch(apiUrl);
-      const data = await response.json();
-      generateWeatherNews(data);
-    } catch (error) {
-      console.error("Failed to fetch weather news", error);
-    }
-  };
-
-  const generateWeatherNews = (data) => {
-    // Replace with actual logic to generate weather news based on data
+  const generateStaticWeatherNews = () => {
+    // Setting static weather news
     setWeatherNews([
       'News 1: Moderate Rain Expected',
       'News 2: Wind Speed High',
