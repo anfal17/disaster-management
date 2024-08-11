@@ -49,7 +49,7 @@ const AlertComponent = () => {
 
   return (
     <div className="max-w-md bg-white p-6 rounded-md shadow-lg w-1/2 grid grid-cols-1 gap-4">
-      <h1 className="text-2xl font-semibold mb-4 text-center">Weather Alerts</h1>
+      <h1 className="text-2xl font-semibold mb-4 text-center text-black">Weather Alerts</h1>
       {weatherNews.map((news, index) => (
         <div key={index} className="border rounded-md p-4 bg-yellow-200 hover:bg-yellow-300 transition-colors duration-300 ease-in-out">
           <span className="text-gray-800 font-medium">{news}</span>
