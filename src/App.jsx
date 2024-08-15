@@ -9,6 +9,7 @@ import GuideDetail from './components/GuideDetail';
 import Helpline from './pages/Helpline';
 import Login from './pages/Login';
 import MissingPersonReport from './pages/Missing';
+import UserProfile from './pages/UserProfile';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/report" element={<Report />} />
+        <Route path="/profile" element={<UserProfile />} />
         <Route path="/guides" element={<Guides />} />
         <Route path="/guides/:id" element={<GuideDetail/>} />
         <Route path="/helpline" element={<Helpline />} />
